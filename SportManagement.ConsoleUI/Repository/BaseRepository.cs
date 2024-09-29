@@ -40,7 +40,9 @@ public abstract class BaseRepository
             Number = "27",
             Branch = "Futbol",
             Age = 32,
-            MarketValue = 10000000
+            MarketValue = 10000000,
+            TeamId = 1
+            
 
         },
         new Player
@@ -51,7 +53,8 @@ public abstract class BaseRepository
             Number = "34",
             Branch = "Voleybol",
             Age = 35,
-            MarketValue = 350000
+            MarketValue = 350000,
+            TeamId = 2
         },
         new Player
         {
@@ -61,7 +64,8 @@ public abstract class BaseRepository
             Number = "1",
             Branch = "Futbol",
             Age = 36,
-            MarketValue = 950000
+            MarketValue = 950000,
+            TeamId = 3
         },
     };
 }

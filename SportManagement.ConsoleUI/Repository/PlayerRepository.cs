@@ -1,6 +1,7 @@
 ﻿
 
 using SportManagement.ConsoleUI.Models;
+using SportManagement.ConsoleUI.Models.Dtos;
 
 namespace SportManagement.ConsoleUI.Repository;
 
@@ -65,5 +66,26 @@ public sealed class PlayerRepository : IPlayerRepository
         BaseRepository.players.Insert(index, updatedPlayer);
 
         return updatedPlayer;
+    }
+
+    public List<PlayerDetailDto> GetDetails(List<Team> teams)
+    {
+        List<PlayerDetailDto> details =
+            BaseRepository.players.Join(teams,
+            p => p.TeamId,
+            t => t.Id,
+            (pl, te) => new PlayerDetailDto(
+                         Id: pl.Id,
+                         teamName: te.Name,
+                         Name: pl.Name,
+                         Surname:pl.Surname,
+                         Number:pl.Number,
+                         Branch:pl.Branch,
+                         Age: pl.Age,
+                         MarketValue:pl.MarketValue
+
+                         )
+            ).ToList();
+        return details;
     }
 }

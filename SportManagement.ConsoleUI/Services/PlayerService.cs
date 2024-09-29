@@ -1,6 +1,7 @@
 ﻿
 
 using SportManagement.ConsoleUI.Models;
+using SportManagement.ConsoleUI.Models.Dtos;
 using SportManagement.ConsoleUI.Models.ReturnModels;
 using SportManagement.ConsoleUI.Repository;
 
@@ -9,6 +10,8 @@ namespace SportManagement.ConsoleUI.Services;
 public class PlayerService : IPlayerService
 {
     PlayerRepository playerRepository = new PlayerRepository();
+    
+
     public void GetAll()
     {
         List<Player> players = playerRepository.GetAll();
@@ -94,4 +97,13 @@ public class PlayerService : IPlayerService
             };
         }
     }
+
+    public void GetDetails()
+    {
+        List<Team> teams = BaseRepository.teams;
+        List<PlayerDetailDto> details = playerRepository.GetDetails(teams);
+        details.ForEach(x => Console.WriteLine(x));
+    }
+
+
 }

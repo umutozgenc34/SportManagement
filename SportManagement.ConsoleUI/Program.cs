@@ -12,7 +12,8 @@ Team newTeam = new Team(2,"Çaykur Rizespor",new DateTime(1953,1,18));
 
 
 PlayerService playerService = new PlayerService();
-Player player = new(new Guid("{CA144940-8B49-4CB2-A7E3-D54A074AD502}"), "Umut", "Özgenç","7","Futbol",24,3000000,1);
+Player player = new(new Guid("{CA144940-8B49-4CB2-A7E3-D54A074AD502}"), "Umut", "Özgenç", "7", "Futbol", 24, 3000000, 1);
+playerService.GetDetails();
 //playerService.GetAll();
 //playerService.Add(player);
 //Console.WriteLine(playerService.GetById(new Guid("{CA144940-8B49-4CB2-A7E3-D54A074AD504}")));

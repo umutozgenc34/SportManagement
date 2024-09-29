@@ -9,6 +9,7 @@ namespace SportManagement.ConsoleUI.Services;
 public class TeamService : ITeamService
 {
     TeamRepository teamRepository = new TeamRepository();
+    
     public void GetAll()
     {
         List<Team> teams = teamRepository.GetAll();
