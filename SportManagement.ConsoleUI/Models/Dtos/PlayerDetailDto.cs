@@ -1,5 +1,7 @@
 ﻿
 
+using SportManagement.ConsoleUI.Models.Enums;
+
 namespace SportManagement.ConsoleUI.Models.Dtos;
 
 public record PlayerDetailDto(
@@ -7,9 +9,10 @@ public record PlayerDetailDto(
         string Name,
         string Surname,
         string Number,
-        string Branch,
+        Branch Branch,
         int Age,
         double MarketValue,
+        Gender Gender,
         string teamName
     );
 

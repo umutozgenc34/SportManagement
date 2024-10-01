@@ -82,7 +82,9 @@ public sealed class PlayerRepository : IPlayerRepository
                          Number:pl.Number,
                          Branch:pl.Branch,
                          Age: pl.Age,
-                         MarketValue:pl.MarketValue
+                         MarketValue:pl.MarketValue,
+                         Gender : pl.Gender
+                         
 
                          )
             ).ToList();

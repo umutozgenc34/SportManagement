@@ -1,6 +1,7 @@
 ﻿
 
 using SportManagement.ConsoleUI.Models;
+using SportManagement.ConsoleUI.Models.Enums;
 
 namespace SportManagement.ConsoleUI.Repository;
 
@@ -38,9 +39,10 @@ public abstract class BaseRepository
             Name = "Rafa",
             Surname = "Silva",
             Number = "27",
-            Branch = "Futbol",
+            Branch = Branch.Football,
             Age = 32,
             MarketValue = 10000000,
+            Gender = Gender.Male,
             TeamId = 1
             
 
@@ -51,9 +53,10 @@ public abstract class BaseRepository
             Name = "Eda",
             Surname = "Erdem",
             Number = "34",
-            Branch = "Voleybol",
+            Branch = Branch.Volleyball,
             Age = 35,
             MarketValue = 350000,
+            Gender = Gender.Female,
             TeamId = 2
         },
         new Player
@@ -62,9 +65,10 @@ public abstract class BaseRepository
             Name = "Fernando",
             Surname = "Muslera",
             Number = "1",
-            Branch = "Futbol",
+            Branch = Branch.Football,
             Age = 36,
             MarketValue = 950000,
+            Gender = Gender.Male,
             TeamId = 3
         },
     };

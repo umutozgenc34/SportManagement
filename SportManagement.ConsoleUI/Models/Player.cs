@@ -1,5 +1,7 @@
 ﻿
 
+using SportManagement.ConsoleUI.Models.Enums;
+
 namespace SportManagement.ConsoleUI.Models;
 
 public sealed class Player : Entity<Guid>
@@ -8,7 +10,7 @@ public sealed class Player : Entity<Guid>
     {
         
     }
-    public Player(Guid id , string name , string surname, string number, string branch,int age, double marketValue, int teamId)
+    public Player(Guid id , string name , string surname, string number, Branch branch,int age, double marketValue, Gender gender,int teamId)
     {
         Id = id;
         Name = name;
@@ -22,9 +24,10 @@ public sealed class Player : Entity<Guid>
     public string Name { get; set; }
     public string Surname { get; set; }
     public string Number { get; set; }
-    public string Branch { get; set; }
+    public Branch Branch { get; set; }
     public int Age { get; set; }
     public double MarketValue { get; set; }
+    public Gender Gender { get; set; }
     public int TeamId { get; set; }
 
     public override string ToString()
